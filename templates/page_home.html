@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+{% load i18n %}
+
+{% block nav_user %}
+    {% if user.is_authenticated %}
+        {{ block.super }}
+    {% else %}
+        {% include "navbar-form-login.html" %}
+    {% endif %}
+{% endblock %}
+
+
+{% block content %}
+    <h1>
+        {% block title %}
+            {% trans "Customs Brokers Exam System" %}
+        {% endblock %}
+    </h1>
+
+    <div class="row">
+{#            {% include "include_cso_info.html" %}#}
+            <h3>{% trans "User documentation" %}</h3>
+
+            <p>{% bootstrap_icon "book" %} {% trans "User manuals are available" %}
+                <a href="http://vrs.gov.mm/redmine/projects/vrs-support/wiki">
+                {% trans " in the Wiki section of VR DB support site." %}
+                    {% comment %}
+                    todo: $( "h1" ).first().load( "/redmine/projects/vrs-support/wiki .wiki-page" );
+                    {% endcomment %}
+                </a>
+            </p>
+        </div>
+
+        {% if "map" in INSTALLED_APPS %}
+            <div class="col-lg-5">
+                <h3>
+                    {% trans "Birth registrations for the last 365 days:" %}
+                </h3>
+                <canvas style=" width: 100%;
+                        height: auto;" id="canvas"></canvas>
+                <blockquote>
+                    <a href="{% url "map" %}">{% bootstrap_icon "stats" %} {% trans "Click here for the realtime monitoring and more stats data" %}</a>
+                </blockquote>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

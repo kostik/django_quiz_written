@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}
+    {{ writtenquizexam }}
+{% endblock %}
+
+{% block content %}
+    <h2>{{ writtenquizexam.description }}</h2>
+    {% for quiz,questions in quizzes.items %}
+        <hr/>
+        <div class="row" style="{% if not forloop.first %}page-break-before:always;{% endif %} page-break-inside: avoid;">
+            <h3>{{ quiz.title }}</h3>
+            <p>{{ quiz.description }}</p>
+        </div>
+        {% for question in questions %}
+            <hr/>
+            <div style=" page-break-after:auto; page-break-inside: avoid;">
+                <div class="row">
+                    {% if question.figure %}
+                        <div class="pull-left" style="padding: 1em">
+                            <img src="{{ question.figure.url }}" class="img-thumbnail">
+                        </div>
+                    {% endif %}
+                    <p class="lead">{{ question.content }}</p>
+                </div>
+                <div class="row">
+                    {% if question.get_answers %}
+                        <div class="form-group">
+                            {% for answer in question.get_answers %}
+                                <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="checkbox" {% if view.kwargs.answers and answer.correct %}checked{% endif %}>
+                            </span>
+                                    <div class="form-control" style="height: 100%">
+                                        {{ answer.content }}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                {% if view.kwargs.answers %}
+                                    {{ question.explanation }}
+                                    {% else %}
+                                <p class="lead">
+                                    <br/><br/><br/><br/><br/><br/>
+                                </p>
+                                {% endif %}
+
+
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %} {# question #}
+    {% endfor %} {# quizz #}
+
+
+    {#<h3>{% trans "Category" %}: {{ quiz.category }}</h3>#}
+    {#{% if quiz.single_attempt %}#}
+    {#  <h4>{% trans "You will only get one attempt at this quiz" %}.</h4>#}
+    {#{% endif %}#}
+
+
+    {#<p>#}
+    {#  <a href="{% url 'quiz_question' quiz_name=quiz.url %}">#}
+    {#	{% trans "Start quiz" %}#}
+    {#  </a>#}
+    {#</p>#}
+{% endblock %}
