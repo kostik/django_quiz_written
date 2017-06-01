@@ -19,31 +19,17 @@
     </h1>
 
     <div class="row">
-{#            {% include "include_cso_info.html" %}#}
             <h3>{% trans "User documentation" %}</h3>
 
             <p>{% bootstrap_icon "book" %} {% trans "User manuals are available" %}
-                <a href="http://vrs.gov.mm/redmine/projects/vrs-support/wiki">
-                {% trans " in the Wiki section of VR DB support site." %}
+                <a href="/todo">
+                {% trans " in the Wiki section of the support site." %}
                     {% comment %}
                     todo: $( "h1" ).first().load( "/redmine/projects/vrs-support/wiki .wiki-page" );
                     {% endcomment %}
                 </a>
             </p>
         </div>
-
-        {% if "map" in INSTALLED_APPS %}
-            <div class="col-lg-5">
-                <h3>
-                    {% trans "Birth registrations for the last 365 days:" %}
-                </h3>
-                <canvas style=" width: 100%;
-                        height: auto;" id="canvas"></canvas>
-                <blockquote>
-                    <a href="{% url "map" %}">{% bootstrap_icon "stats" %} {% trans "Click here for the realtime monitoring and more stats data" %}</a>
-                </blockquote>
-            </div>
-        {% endif %}
     </div>
 {% endblock %}
 

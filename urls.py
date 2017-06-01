@@ -25,7 +25,8 @@ urlpatterns = patterns('',
                            {'next_page': reverse_lazy("home")}
                            ),
 
-                       url('^written/', include('generator.urls'))
+                       url('^written/', include('mysite.generator.urls')),
+                       url(r'^rosetta/', include('rosetta.urls')),
 
                        )
 
