@@ -21,123 +21,123 @@ msgstr ""
 
 #: admin.py:17 admin.py:25
 msgid "link"
-msgstr ""
+msgstr "လင့်ခ်"
 
 #: models.py:14
 msgid "Title"
-msgstr ""
+msgstr "ခေါင်းစဉ်များ"
 
 #: models.py:18 models.py:43
 msgid "Description"
-msgstr "DESCRIPTION1"
+msgstr "ဖော်ပြချက်"
 
 #: models.py:19
 msgid "a description of the quiz"
-msgstr "A DESCRIPTION OF THE QUIZ"
+msgstr "မေးခွန်း၏ဖော်ပြချက်"
 
 #: models.py:27
 msgid "Written Quiz"
-msgstr ""
+msgstr "ရေးဖြေနိုင်သောမေးခွန်း"
 
 #: models.py:28
 msgid "Written Quizzes"
-msgstr ""
+msgstr "ရေးဖြေနိုင်သောမေးခွန်းများ"
 
 #: models.py:44
 msgid "a description of the exam"
-msgstr ""
+msgstr "စာမေးပွဲဖော်ပြချက်"
 
 #: models.py:47
 msgid "Created"
-msgstr ""
+msgstr "ဖန်တီးခဲ့သည်"
 
 #: models.py:53
 msgid "Question List"
-msgstr ""
+msgstr "မေးခွန်းစာရင်း"
 
 #: models.py:84
 msgid "This test is empty"
-msgstr ""
+msgstr "အဖြေသည်အလွတ်ဖြစ်နေသည်"
 
 #: templates/question.html:15 templates/result.html:15
 msgid "The previous question"
-msgstr ""
+msgstr "ယခင်မေးခွန်း"
 
 #: templates/question.html:26
 msgid "Your answer was"
-msgstr ""
+msgstr "သင့်အဖြေမှာ"
 
 #: templates/question.html:36 templates/result.html:24
 #: templates/result.html.py:95
 msgid "Explanation"
-msgstr ""
+msgstr "ရှင်းလင်းချက်"
 
 #: templates/question.html:51
 msgid "Question"
-msgstr ""
+msgstr "မေးခွန်း"
 
 #: templates/question.html:51
 msgid "of"
-msgstr ""
+msgstr "၏"
 
 #: templates/question.html:56
 msgid "Question category"
-msgstr ""
+msgstr "မေးခွန်းဘာသာရပ်"
 
 #: templates/question.html:78
 msgid "Check"
-msgstr ""
+msgstr "စစ်ဆေးမည်"
 
 #: templates/result.html:8
 msgid "Exam Results for"
-msgstr ""
+msgstr "စာမေးပွဲရလဒ်မှာ"
 
 #: templates/result.html:35
 msgid "Exam results"
-msgstr ""
+msgstr "စာမေးပွဲရလဒ်"
 
 #: templates/result.html:37
 msgid "Exam title"
-msgstr ""
+msgstr "စာမေးပွဲခေါင်းစဉ်"
 
 #: templates/result.html:40
 msgid "User"
-msgstr ""
+msgstr "အသုံးပြုသူ"
 
 #: templates/result.html:46
 msgid "You answered"
-msgstr ""
+msgstr "သင့်အဖြေမှာ"
 
 #: templates/result.html:46
 msgid "questions correctly out of"
-msgstr ""
+msgstr "မှန်သောမေးခွန်းများမှာ"
 
 #: templates/result.html:46
 msgid "giving you"
-msgstr ""
+msgstr "သင့်ကိုပေးမည်မှာ"
 
 #: templates/result.html:46
 msgid "percent correct"
-msgstr ""
+msgstr "ရာခိုင်နှုန်းမှန်ကန်ခဲ့ပါသည်"
 
 #: templates/result.html:56
 msgid "Review the questions below and try the exam again in the future"
-msgstr ""
+msgstr "မေးခွန်းများကိုလေ့လာပြီးနောင်တွင်ပြန်လည်ဖြေဆိုပါ"
 
 #: templates/result.html:60
 msgid ""
 "The result of this exam will be stored in your progress section so you can "
 "review and monitor your progression"
-msgstr ""
-
+msgstr "ဒီစာမေးပွဲရလဒ်ကို သင့်မှတ်တမ်းတွင်သိမ်းဆည်းထားပြီး သင့်၏အခြေအနေကို"
+"စောင့်ကြည့်ပြီးအမြဲသိရှိနိုင်သည်"
 #: templates/result.html:74
 msgid "Your session score is"
-msgstr ""
+msgstr "သင့်ဖြေဆိုမှု၏ရလဒ်အမှတ်မှာ"
 
 #: templates/result.html:74
 msgid "out of a possible"
-msgstr ""
+msgstr "ဖြစ်နိုင်ချေမရှိသော"
 
 #: templates/result.html:92
 msgid "Your answer"
-msgstr ""
+msgstr "သင့်အဖြေမှာ"
