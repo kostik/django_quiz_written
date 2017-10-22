@@ -72,7 +72,17 @@
             {% endblock %}
 
             {% block nav_user %}
+
                 {% if user.is_authenticated %}
+                    {% if perms.quiz.view_sittings %}
+                        <div class="navbar-form navbar-right">
+                            <a href="{% url 'quiz_marking' %}" class="btn btn-default">
+                                {% bootstrap_icon "th-list" %} {% trans "List of complete exams" %}
+                            </a>
+                        </div>
+
+                    {% endif %}
+
                     <div class="navbar-form navbar-right">
                         <a href="{% url 'password_change' %}" class="btn btn-default">
                             <span class="glyphicon glyphicon-user"></span> {{ user.get_username }}
@@ -83,6 +93,7 @@
                         </a>
                     </div>
                 {% endif %}
+
             {% endblock %}
 
         </div>

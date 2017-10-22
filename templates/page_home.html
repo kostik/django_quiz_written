@@ -14,22 +14,15 @@
 {% block content %}
     <h1>
         {% block title %}
-            {% trans "Customs Brokers Exam System" %}
+            {% trans "MCDIS Exam System" %}
         {% endblock %}
     </h1>
 
     <div class="row">
-            <h3>{% trans "User documentation" %}</h3>
-
-            <p>{% bootstrap_icon "book" %} {% trans "User manuals are available" %}
-                <a href="/todo">
-                {% trans " in the Wiki section of the support site." %}
-                    {% comment %}
-                    todo: $( "h1" ).first().load( "/redmine/projects/vrs-support/wiki .wiki-page" );
-                    {% endcomment %}
-                </a>
-            </p>
-        </div>
+        <ul class="lead">
+            <li><a href="{% url 'quiz_index' %}">{% trans "All quizes" %}</a></li>
+            <li><a href="{% url 'quiz_category_list_all' %}">{% trans "All categories" %}</a></li>
+        </ul>
     </div>
 {% endblock %}
 
